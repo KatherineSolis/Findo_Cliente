@@ -1,0 +1,104 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id = "toolbar">
+      Findo Cliente
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true" class="auth-form">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+    <ion-grid>
+        <ion-row>
+            <ion-col align-self-center>
+                <strong><h1 id="titulo">FINDO CLIENTE</h1></strong>
+
+                <form class="" #formulario="ngForm" (ngSubmit)="ingresar();">
+                    <ion-item id="item">
+                        <ion-label  id="lb-e" position="floating">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            Email
+                        </ion-label>
+                        <ion-input type="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" [(ngModel)]="usuario.email" required></ion-input>
+                    </ion-item>
+                    <ion-item id="item1">
+                        <ion-label  id="lb-c" position="floating">
+                            <ion-icon name="lock-open-outline"></ion-icon>
+                            Contraseña
+                        </ion-label>
+                        <ion-input type="password" name="password" [(ngModel)]="usuario.password"required></ion-input>
+                    </ion-item>
+                    <span>
+                      <h6 *ngIf="formulario.invalid==true"class="stilo hide" id="err" #err>Email o password incorrectas
+                      </h6>
+                    </span>
+                    <div class="login">
+                        <ion-button [disabled]="formulario.invalid" type="submit" [routerLink]="['/home']">
+                          Iniciar
+                          <ion-icon slot="start" name="log-out"></ion-icon>
+                        </ion-button>
+                    </div>
+                    <br><br>
+                    <div class="btn-center">
+                        <ion-text>
+                          <a [routerLink]="['/recuperar-password']" class="small-text">¿Olvidaste tu contraseña?</a>
+                        </ion-text>
+                    </div>
+                </form>
+                <br><br>
+                <span class="divider line one-line">or</span>
+                <br><br>
+                <div class="btn-center">
+                    <ion-button [routerLink]="['/registrarse']" color="danger" shape="round">Registrarse</ion-button>
+                </div>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    <div id="container">
+    </div>
+
+  <!-- <form  (ngSubmit)="">
+    <ion-list>
+        <ion-item>
+          <ion-label color="primary" floating>
+              <ion-icon name="md-mail"></ion-icon> &nbsp; Email:
+          </ion-label>
+          <ion-input formControlName="email" type="text" placeholder="" [(ngModel)]="emailToken">
+          </ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+          <ion-label color="primary" floating>
+              <ion-icon name="key"></ion-icon> &nbsp; Password:
+          </ion-label>
+          <ion-input  formControlName="password" type="password" placeholder="" ></ion-input>
+        </ion-item>
+    </ion-list>
+          <span>
+            <h6 class="stilo hide" id="err" #err>Email o password incorrectas
+            </h6>
+          </span>
+      <div padding>
+        <button type="submit" [disabled]="!myForm.valid" ion-button>
+            <ion-icon name="log-in"></ion-icon> &nbsp; Login
+        </button>
+        <br><br>
+        <u>
+            <a style="color: #4d90fe" (click)="">¿Olvidaste tu contraseña?</a>
+        </u>
+        <br><br>
+        <p *ngIf="registrado != 'true'">¿No tienes cuenta?</p>
+        <u *ngIf="registrado != 'true'" style="color: #488aff;">
+            <a (click)="">
+                <u>Registrarse</u>
+            </a>
+        </u>
+      </div>
+  </form> -->
+</ion-content>

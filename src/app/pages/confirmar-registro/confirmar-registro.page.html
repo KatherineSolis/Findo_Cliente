@@ -1,0 +1,22 @@
+<app-header titulo="Confirmarción Registro"></app-header>
+
+<ion-content padding>
+    <form class="formulario" >
+        <div id="container">
+            <p class="parrafo">Revise su correo, se le ha enviado un código
+              el cual tiene que poner a continuación para validar su registro.</p>
+        </div>
+        <ion-list id= "codigo">
+            <ion-item>
+                <ion-label color="primary" stacked>Código: </ion-label>
+                <ion-input type="text" placeholder=""></ion-input>
+            </ion-item>
+        </ion-list>
+
+        <ion-row class="btn">
+          <ion-col>
+            <ion-button (click)="ConfirmarCodigo();"[routerLink]="['/login']" type="submit" color="primary" shape="round">Confirmar</ion-button>
+          </ion-col>
+        </ion-row>
+    </form>
+</ion-content>
